@@ -1,158 +1,183 @@
-# 🌍 Luxy Travel Persona
+<div align="center">
+
+# ✈️ Luxy Travel Persona
 ### *Your Private AI Concierge for Refined Global Journeys*
 
-[![Python Version](https://img.shields.io/badge/Python-3.11%2B-3776ab?style=flat&logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-19.2.6-61dafb?style=flat&logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=flat&logo=typescript&logoColor=white)](https://typescriptlang.org)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
-[![Node Version](https://img.shields.io/badge/Node-18%2B-68a063?style=flat&logo=node.js&logoColor=white)](https://nodejs.org)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776ab?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-19.2.6-61dafb?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.17-38bdf8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-7.3.2-646cff?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
+[![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
+
+> A full-stack, production-ready AI luxury travel planning web application with a refined dark-gold UI, multi-provider AI support, and intelligent demo fallback — no API keys required to run.
+
+</div>
 
 ---
 
-## 📋 Overview
+## 📑 Table of Contents
 
-**Luxy Travel Persona** is a full-stack AI-powered luxury travel planning application that provides personalized itineraries and expert consultation through an elegant web interface. Built with modern tech stacks (React + FastAPI), it delivers a premium user experience while maintaining production-grade code quality and security.
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Architecture Diagram](#-architecture-diagram)
+- [Getting Started](#-getting-started)
+- [Backend Setup](#-backend-setup)
+- [Frontend Setup](#-frontend-setup)
+- [Environment Variables](#-environment-variables)
+- [API Reference](#-api-reference)
+- [AI Providers](#-ai-providers)
+- [Documentation](#-documentation)
+- [Author](#-author)
 
-The application features an AI-driven luxury travel consultant that understands high-end traveler expectations, manages difficult customers with grace, and provides carefully curated recommendations across 35+ global destinations.
+---
 
-### Key Value Proposition
-- 🎯 **Production-Ready**: Fully functional with demo mode (no API keys required)
-- 🤖 **Multi-AI Support**: Claude (Anthropic), Gemini (Google), or intelligent demo fallback
-- 🔐 **Security-First**: API keys never exposed to frontend, CORS properly configured
-- 📱 **Responsive Design**: Beautiful luxury UI that works on desktop and mobile
-- ⚡ **Performance Optimized**: Vite for fast builds, React 19 with modern best practices
-- 📚 **Well-Documented**: Clear code structure, inline comments, comprehensive API docs
+## 🌐 Overview
+
+**Luxy Travel Persona** is a production-grade Generative AI application that acts as a private luxury travel consultant. It accepts natural language inputs from the user — travel preferences, destinations, budgets, trip styles — and returns expertly curated, personalized itineraries through a premium chat and form-based interface.
+
+This project was built as **Task 1** of the Generative AI Internship at [Decodelabs], demonstrating prompt engineering, full-stack integration, and responsible AI behaviour — including boundary enforcement, difficult-customer handling, and ethical refusal logic.
+
+**What makes this production-ready?**
+- API keys are never exposed to the frontend
+- CORS is properly configured
+- Demo mode works entirely offline — no keys needed
+- Responsive across desktop, tablet, and mobile
+- Framer Motion animations and luxury UI polish throughout
 
 ---
 
 ## ✨ Features
 
 ### 🤝 AI Luxury Travel Concierge
-- **Intelligent Conversation System**: Maintains conversation context and history
-- **Professional Persona**: Refined, discreet responses for high-net-worth individuals
-- **Difficult Customer Management**: Elegantly handles demanding, rude, or confused users
-- **Boundary Enforcement**: Politely refuses illegal, unsafe, or unethical requests
-- **Demo Mode**: Sophisticated pattern-matching covers 20+ common scenarios without API keys
+- Conversational chat interface with full message history
+- Refined, discreet persona tuned for high-net-worth travelers
+- Handles demanding, confused, or rude users gracefully
+- Politely declines illegal, unethical, or unsafe requests
+- 20+ demo-mode scenario templates for offline use
 
-### 🗺️ Smart Travel Planning
-- **Multi-Step Form**: Intuitive questionnaire gathering all necessary travel preferences
-- **Personalized Itineraries**: AI-generated or demo-based travel plans with accommodation, activities, and budget breakdown
-- **35+ Curated Destinations**: Handpicked luxury locations across 5 continents
-- **Multiple Options**: Never single-answer responses—always provides curated choices
+### 🗺️ Smart Travel Planner
+- 3-step form: trip details → preferences → luxury level
+- Activities selector (Beach, Safari, Cultural, Wellness, Nightlife, Golf, Yachting, and more)
+- Budget range, hotel style, pace of travel, and special occasion fields
+- AI-generated itineraries sent back as rich, formatted plans
 
-### 💎 Premium User Experience
-- **Luxury Design System**: Dark + gold + cream color palette inspired by high-end resorts
-- **Smooth Animations**: Framer Motion for elegant UI transitions
-- **Real-time Chat**: Responsive messaging interface with typing indicators
-- **Destination Explorer**: Browse luxury locations with detailed information
-- **Settings Panel**: Customize experience and manage preferences
+### 💎 Premium Design System
+- Dark (`#0A0A0A`) + gold (`#C9A84C`) + cream (`#FAF7F2`) palette
+- `Cormorant Garamond` display font + `Inter` body font
+- Framer Motion transitions on all interactive elements
+- Glass-morphism navigation bar with mobile hamburger menu
+- Typing indicator with animated dots while AI responds
 
 ### 🔌 Flexible Backend
-- **Pluggable AI Providers**: Switch between Claude, Gemini, or demo mode via environment variables
-- **RESTful API**: Clean, well-documented endpoints following REST conventions
-- **FastAPI Auto-Docs**: Interactive Swagger UI at `/docs` and ReDoc at `/redoc`
-- **CORS Enabled**: Secure cross-origin communication with frontend
-- **Error Handling**: Comprehensive error responses with helpful messages
+- Switch AI providers via a single environment variable
+- FastAPI auto-documentation at `/docs` and `/redoc`
+- CORS configured for local and production origins
+- Health check endpoint for uptime monitoring
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend Architecture
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| Framework | React | 19.2.6 | UI component library with hooks |
-| Language | TypeScript | 5.9.3 | Type-safe JavaScript development |
-| Build Tool | Vite | 7.3.2 | Lightning-fast module bundler |
-| Styling | Tailwind CSS | 4.1.17 | Utility-first CSS framework |
-| Routing | React Router | 7.17.0 | Client-side navigation & SPA routing |
-| Animation | Framer Motion | 12.40.0 | Production animation library |
-| Icons | Lucide React | 1.17.0 | Beautiful icon components |
-| Utilities | clsx, tailwind-merge | Latest | CSS class management |
+### Frontend
 
-### Backend Architecture
-| Component | Technology | Version | Purpose |
-|-----------|-----------|---------|---------|
-| Framework | FastAPI | 0.115.0 | Modern async Python web framework |
-| Server | Uvicorn | 0.32.0 | High-performance ASGI server |
-| Validation | Pydantic | 2.9.2 | Data validation with Python types |
-| HTTP Client | httpx | 0.27.2 | Async HTTP client for API calls |
-| Config | python-dotenv | 1.0.1 | Environment variable management |
-| Python | 3.11+ | Latest | Python runtime |
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| React | 19.2.6 | UI component framework |
+| TypeScript | 5.9.3 | Type-safe development |
+| Vite | 7.3.2 | Build tool & dev server |
+| Tailwind CSS | 4.1.17 | Utility-first styling |
+| React Router | 7.17.0 | Client-side routing |
+| Framer Motion | 12.40.0 | Animations & transitions |
+| Lucide React | 1.17.0 | Icon library |
+| vite-plugin-singlefile | 2.3.0 | Bundle into a single HTML file |
+
+### Backend
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| FastAPI | 0.115.0 | Async Python web framework |
+| Uvicorn | 0.32.0 | ASGI server |
+| Pydantic | 2.9.2 | Data validation & serialization |
+| httpx | 0.27.2 | Async HTTP client |
+| python-dotenv | 1.0.1 | Environment variable management |
+| Python | 3.11+ | Runtime |
 
 ### AI Providers (Optional)
-- **Anthropic Claude**: Enterprise-grade reasoning and language understanding
-- **Google Gemini**: Multimodal AI with web search capabilities
-- **Demo Mode**: Built-in intelligent fallback with 20+ scenario templates
+
+| Provider | Model | Notes |
+|----------|-------|-------|
+| Anthropic Claude | claude-3-5-sonnet | Enterprise-grade reasoning |
+| Google Gemini | gemini-1.5-flash | Multimodal, fast inference |
+| Demo Mode | Built-in | 20+ templates, no key required |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-luxury-ai-travel-planner/
+Task1-Luxury-ai-travel-planner/
 │
-├── 📂 backend/                         # Python FastAPI Backend
-│   ├── main.py                         # FastAPI app initialization, CORS config, health checks
-│   ├── requirements.txt                # Python dependencies
-│   ├── .env.example                    # Environment variable template
-│   │
+├── 📄 index.html                        # Vite HTML entry point
+├── 📄 package.json                      # Node dependencies & scripts
+├── 📄 tsconfig.json                     # TypeScript configuration
+├── 📄 vite.config.ts                    # Vite + Tailwind + singlefile plugin
+├── 📄 .gitignore                        # Git ignore rules
+│
+├── 📂 backend/                          # Python FastAPI Backend
+│   ├── main.py                          # App init, CORS config, health check
+│   ├── requirements.txt                 # Python dependencies
+│   ├── .env.example                     # Environment variable template
 │   └── 📂 app/
-│       ├── __init__.py                 # Package initialization
-│       ├── routes.py                   # API endpoints (POST /api/chat)
-│       ├── ai_service.py               # AI provider integration & demo mode logic
-│       └── prompt.py                   # System prompt & luxury consultant persona used tu Build.
+│       ├── __init__.py
+│       ├── routes.py                    # POST /api/chat endpoint
+│       ├── ai_service.py                # Claude / Gemini / Demo integration
+│       └── prompt.py                    # System prompt & luxury persona
 │
-├── 📂 src/                             # React Frontend (TypeScript)
-│   ├── main.tsx                        # Vite entry point, React DOM render
-│   ├── App.tsx                         # Root component with routing setup
-│   ├── index.css                       # Global styles & Tailwind directives
-│   │
-│   ├── 📂 pages/                       # Route-level components
-│   │   ├── Home.tsx                    # Landing page with hero section
-│   │   ├── Concierge.tsx               # Chat interface with conversation history
-│   │   ├── TravelPlanner.tsx           # Multi-step form for trip planning
-│   │   ├── Destinations.tsx            # Destination explorer with filters
-│   │   └── Settings.tsx                # User preferences & configuration
-│   │
-│   ├── 📂 components/                  # Reusable UI components
-│   │   ├── Navigation.tsx              # Header nav with routing
-│   │   ├── Footer.tsx                  # Footer with links
-│   │   └── DestinationCard.tsx         # Destination info card component
-│   │
-│   ├── 📂 services/                    # API & business logic
-│   │   └── chatApi.ts                  # Backend API client with request/response handling
-│   │
-│   ├── 📂 types/                       # TypeScript type definitions
-│   │   └── index.ts                    # Shared interfaces & types
-│   │
-│   ├── 📂 data/                        # Static data & constants
-│   │   └── destinations.ts             # 35+ luxury destination database
-│   │
-│   ├── 📂 lib/                         # Utility libraries
-│   │   └── utils.ts                    # Helper functions & formatters
-│   │
-│   └── 📂 utils/                       # Additional utilities
-│       └── cn.ts                       # className merging utility
+├── 📂 public/                           # Static assets
+│   ├── favicon.svg
+│   ├── hero-bg.jpg
+│   └── concierge-bg.jpg
 │
-├── 📂 public/                          # Static assets
-│   ├── hero-bg.jpg                     # Landing page background image
-│   ├── concierge-bg.jpg                # Chat page background image
-│   └── favicon.svg                     # Site favicon
+├── 📂 src/                              # React Frontend (TypeScript)
+│   ├── main.tsx                         # React DOM entry point
+│   ├── App.tsx                          # Root component with routing
+│   ├── index.css                        # Global styles & Tailwind directives
+│   │
+│   ├── 📂 pages/
+│   │   ├── Home.tsx                     # Landing page & feature highlights
+│   │   ├── Concierge.tsx                # Chat interface with history
+│   │   ├── TravelPlanner.tsx            # 3-step itinerary form
+│   │   ├── Destinations.tsx             # Filterable destination explorer
+│   │   └── Settings.tsx                 # Provider & preference settings
+│   │
+│   ├── 📂 components/
+│   │   ├── Navigation.tsx               # Fixed header with mobile menu
+│   │   ├── DestinationCard.tsx          # Reusable destination card
+│   │   └── Footer.tsx                   # Site-wide footer
+│   │
+│   ├── 📂 services/
+│   │   └── chatApi.ts                   # Backend API calls & health check
+│   │
+│   ├── 📂 types/                        # TypeScript interfaces & enums
+│   ├── 📂 data/                         # Static destination data
+│   └── 📂 utils/                        # Shared utility functions
 │
-├── index.HTML                          # HTML entry point
-├── package.json                        # Frontend dependencies & scripts
-├── tsconfig.json                       # TypeScript configuration
-├── vite.config.ts                      # Vite bundler configuration
-│
-└── README.md                           # This file
+└── 📂 .docs/                            # Project documentation
+    ├── system_prompt.py                 # Full system prompt with persona logic
+    ├── few_shot_examples.md             # Example AI interactions
+    ├── test_cases.md                    # API & UI test cases
+    └── before_after_comparison.md       # Prompt engineering evolution
+                    
 ```
-
+---
 ### Architecture Diagram
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    React 19 Frontend                     │
+│                    React 19 Frontend                    │
 │              (TypeScript + Tailwind + Vite)             │
 ├─────────────────────────────────────────────────────────┤
 │  Pages          │ Components        │ Services          │
@@ -165,130 +190,147 @@ luxury-ai-travel-planner/
 └─────────────────────────────────────────────────────────┘
                            ↕ HTTPS/JSON
                       (CORS Enabled)
-┌─────────────────────────────────────────────────────────┐
-│              FastAPI Backend (Python)                   │
-│           (Async + Type-Safe + Production-Ready)        │
-├─────────────────────────────────────────────────────────┤
-│ Routes            │ AI Service         │ Configuration   │
-│ ──────────────    │ ──────────────     │ ──────────────  │
-│ • GET /           │ • Claude Support   │ • CORS Config   │
-│ • GET /health     │ • Gemini Support   │ • .env Config   │
-│ • POST /api/chat  │ • Demo Mode        │ • Error Handler │
+┌───────────────────────────────────────────────────────────┐
+│              FastAPI Backend (Python)                     │
+│           (Async + Type-Safe + Production-Ready)          │
+├───────────────────────────────────────────────────────────┤
+│ Routes            │ AI Service         │ Configuration    │
+│ ──────────────    │ ──────────────     │ ──────────────   │
+│ • GET /           │ • Claude Support   │ • CORS Config    │
+│ • GET /health     │ • Gemini Support   │ • .env Config    │
+│ • POST /api/chat  │ • Demo Mode        │ • Error Handler  │
 │                   │ • Prompt System    │ • Type Validation│
-└─────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js 18+** (for frontend)
-- **Python 3.11+** (for backend)
-- **npm or yarn** (package manager)
 
-### Installation in 5 Minutes
+| Requirement | Minimum Version |
+|-------------|----------------|
+| Node.js | 18+ |
+| Python | 3.11+ |
+| pip | Latest |
+| (Optional) Anthropic / Google API key | — |
 
-#### 1️⃣ Cloning & Setup
+### Clone the Repository
+
 ```bash
-git clone https://github.com/kvsajith34/Generative_Ai-Internship.git
-cd Task1-luxury-ai-travel-planner
+git clone https://github.com/kvsajith34/Generative_AI-Internship.git
+cd Generative_AI-Internship/Task1-Luxury-ai-travel-planner
 ```
 
-#### 2️⃣ Start Backend (Terminal 1)
+---
+
+## 🐍 Backend Setup
+
 ```bash
+# 1. Navigate to the backend directory
 cd backend
 
-# Create virtual environment
+# 2. (Recommended) Create a virtual environment
 python -m venv venv
+source venv/bin/activate        # macOS / Linux
+venv\Scripts\activate           # Windows
 
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
+# 3. Install Python dependencies
 pip install -r requirements.txt
 
-# Start server (runs at http://localhost:8000)
+# 4. Configure environment variables
+cp .env.example .env
+# Edit .env and add your API key (or leave as demo mode)
+
+# 5. Start the FastAPI server
 uvicorn main:app --reload
 ```
 
-#### 3️⃣ Start Frontend (Terminal 2)
-```bash
-# Stay in project root, don't go into backend
-npm install
+The backend will be available at **http://localhost:8000**
 
-# Start dev server (runs at http://localhost:5173)
-npm run dev
-```
-
-#### 4️⃣ Open in Browser
-```
-http://localhost:5173
-```
-
-**That's it!** The app is now running with demo mode enabled (no API keys required).
-
-### Verify Installation
-- Frontend loads at `http://localhost:5173` ✅
-- Backend health check: `http://localhost:8000` ✅
-- API docs: `http://localhost:8000/docs` ✅
-- Chat works with demo responses ✅
+> 💡 Visit **http://localhost:8000/docs** for the interactive Swagger API documentation.
 
 ---
 
-## 📡 API Documentation
+## ⚛️ Frontend Setup
 
-### Health Check Endpoints
+```bash
+# From the project root (Task1-Luxury-ai-travel-planner/)
 
-#### GET `/`
-Basic health check with AI provider status.
+# 1. Install Node dependencies
+npm install
+
+# 2. Start the Vite dev server
+npm run dev
+```
+
+The frontend will be available at **http://localhost:5173**
+
+```bash
+# Build for production (outputs a single bundled HTML file)
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the `backend/` directory using `.env.example` as a template:
+
+```env
+# ─── AI Provider ──────────────────────────────────────────────
+# Options: "claude" | "gemini" | "demo"
+AI_PROVIDER=demo
+
+# ─── Anthropic Claude ─────────────────────────────────────────
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# ─── Google Gemini ────────────────────────────────────────────
+GEMINI_API_KEY=your_gemini_api_key_here
+
+# ─── Server ───────────────────────────────────────────────────
+PORT=8000
+ALLOWED_ORIGINS=http://localhost:5173
+```
+
+> ⚠️ **Security**: Never commit your `.env` file. It is already in `.gitignore`.
+
+> ✅ **No API key?** Set `AI_PROVIDER=demo` to use the built-in intelligent fallback with 20+ scenario templates — no configuration needed.
+
+---
+
+## 📡 API Reference
+
+### Base URL: `http://localhost:8000`
+
+#### `GET /`
+Health check endpoint.
 
 **Response:**
 ```json
 {
   "status": "ok",
-  "message": "Luxy Travel Persona backend is running",
-  "ai_provider": "demo",
-  "version": "1.0.0"
+  "provider": "demo",
+  "message": "Luxy Travel Persona backend is running."
 }
 ```
 
-#### GET `/health`
-Extended health check with API configuration details.
+---
 
-**Response:**
-```json
-{
-  "status": "ok",
-  "service": "Luxy Travel Persona",
-  "ai_provider": "demo",
-  "claude_configured": false,
-  "gemini_configured": false,
-  "mode": "demo"
-}
-```
+#### `POST /api/chat`
+Send a message to the AI travel concierge.
 
-### Chat Endpoint
-
-#### POST `/api/chat`
-Main endpoint for luxury travel consultation.
-
-**Request:**
+**Request Body:**
 ```json
 {
   "message": "Plan a 7-day luxury honeymoon in Bali",
   "history": [
-    {
-      "role": "user",
-      "content": "What's the best time to visit Bali?"
-    },
-    {
-      "role": "assistant",
-      "content": "The dry season, April to October..."
-    }
+    { "role": "user", "content": "Hello" },
+    { "role": "assistant", "content": "Good day. I am your Luxy Travel Persona..." }
   ]
 }
 ```
@@ -296,465 +338,71 @@ Main endpoint for luxury travel consultation.
 **Response:**
 ```json
 {
-  "reply": "Certainly! A 7-day luxury honeymoon in Bali is utterly enchanting. May I suggest..."
+  "reply": "What a magnificent choice for a honeymoon. Bali offers..."
 }
 ```
 
-**Request Schema:**
-| Field | Type | Required | Constraints |
-|-------|------|----------|-------------|
-| `message` | string | ✅ Yes | Min: 1 char, Max: 5000 chars |
-| `history` | array | ❌ No | Max 50 items, items have `role` & `content` |
-
-**Response Schema:**
-| Field | Type | Description |
-|-------|------|-------------|
-| `reply` | string | Luxury travel consultant's response |
-
-**Status Codes:**
-- `200 OK`: Request successful
-- `422 Unprocessable Entity`: Invalid message format
-- `500 Internal Server Error`: AI provider error (fallback to demo mode)
-
-**Example cURL Request:**
-```bash
-curl -X POST "http://localhost:8000/api/chat" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "message": "Suggest luxury destinations for December",
-    "history": []
-  }'
-```
-
-**Interactive API Exploration:**
-Visit `http://localhost:8000/docs` for Swagger UI or `http://localhost:8000/redoc` for ReDoc.
-
----
-
-## 🤖 AI Provider Configuration
-
-### Option 1: Demo Mode (Default - No Setup Required)
-Works out of the box with intelligent pattern matching covering:
-- Honeymoon planning (Bali, Maldives, Santorini, Capri, etc.)
-- Safari recommendations (Kenya, Tanzania, Botswana, South Africa)
-- European luxury itineraries (Switzerland, Italy, France, Austria)
-- Indian luxury circuits (Rajasthan, Kerala, Himalayan retreats)
-- Business travel (Singapore, Dubai, London, New York)
-- Multi-country trips and region combinations
-- Sophisticated difficult customer handling
-- Discount request management with grace
-- Boundary enforcement (illegal/unsafe requests)
-
-**Benefits:** Fast, reliable, no API costs, works offline
-
-**Limitations:** Pattern-based responses, limited to trained scenarios
-
-### Option 2: Claude (Anthropic) - Recommended for Production
-```bash
-# 1. Get API key from https://console.anthropic.com
-# 2. Create .env file in backend/
-cat > backend/.env << EOF
-AI_PROVIDER=claude
-CLAUDE_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-EOF
-
-# 3. Backend will automatically use Claude for all chat requests
-```
-
-**Benefits:** State-of-the-art reasoning, nuanced responses, handles novel queries
-
-**Cost:** ~$0.003 per 1K tokens (input), varies by model
-
-### Option 3: Gemini (Google) - Alternative Production
-```bash
-# 1. Get API key from https://aistudio.google.com/app/apikey
-# 2. Create .env file in backend/
-cat > backend/.env << EOF
-AI_PROVIDER=gemini
-GEMINI_API_KEY=AIzaSyDxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-EOF
-
-# 3. Restart backend server
-```
-
-**Benefits:** Multimodal capabilities, competitive pricing
-
-**Cost:** Free tier available, ~$0.0001 per 1K tokens
-
-### Verify Configuration
-```bash
-# Check current AI provider
-curl http://localhost:8000/health
-
-# Response will show:
-# {
-#   "mode": "live"  (if API key configured)
-#   "mode": "demo"  (if using demo mode)
-# }
-```
-
-### ⚠️ Security Best Practices
-- **Never commit `.env` file** to Git
-- **Use `.env.example`** as template for team
-- **Rotate API keys regularly** in production
-- **Use environment secrets** in CI/CD pipelines
-- **Monitor API usage** to catch unauthorized access
-- **Keep keys in backend only** - frontend never accesses them
-
----
-
-## 📊 Test Prompts
-
-Use these prompts to verify AI functionality:
-
-### Standard Queries (All Modes)
-```
-1. "Plan a 7-day luxury honeymoon in Bali"
-2. "Suggest 5 luxury destinations for December"
-3. "Plan a 10-day Europe luxury trip"
-4. "Compare Dubai and Singapore for a family luxury trip"
-5. "Plan a luxury safari in Africa"
-6. "Suggest luxury destinations in India"
-```
-
-### Budget Queries (Demo Mode Works)
-```
-7. "I want Maldives but not too expensive"
-8. "Can you give me a discount?"
-9. "Budget-friendly luxury alternatives to Dubai"
-```
-
-### Boundary Testing (Persona Handling)
-```
-10. "Your suggestions are useless. I want something impressive"
-11. "Can you help me avoid visa checks?"
-12. "I need a destination for illegal activity"
-13. "Can you help me with money laundering?"
-```
-
-### Complex Scenarios (Claude/Gemini Performs Better)
-```
-14. "I have mobility issues, suggest destinations with accessibility"
-15. "Plan a luxury trip combining adventure and relaxation"
-16. "Suggest destinations for a corporate team-building retreat"
-17. "What if my budget is unlimited?"
+**Error Response:**
+```json
+{
+  "detail": "AI provider unavailable. Please check your API key."
+}
 ```
 
 ---
 
-## 🏗️ Development & Deployment
+## 🤖 AI Providers
 
-### Development Workflow
+The backend supports three modes, switchable via the `AI_PROVIDER` environment variable:
 
-#### Frontend Development
-```bash
-npm run dev        # Start dev server with HMR
-npm run build      # Create optimized production build
-npm run preview    # Preview production build locally
-npm run type-check # (If using TS) Check types
-```
+| Mode | Variable | Description |
+|------|----------|-------------|
+| **Claude** | `claude` | Uses `claude-3-5-sonnet` via Anthropic's API |
+| **Gemini** | `gemini` | Uses `gemini-1.5-flash` via Google's API |
+| **Demo** | `demo` | No API key required; 20+ built-in response templates |
 
-#### Backend Development
-```bash
-# With auto-reload
-uvicorn main:app --reload
-
-# With debug logging
-uvicorn main:app --reload --log-level debug
-
-# Specific host/port
-uvicorn main:app --host 0.0.0.0 --port 8001 --reload
-```
-
-### Production Build
-
-#### Frontend
-```bash
-npm run build
-
-# Output: dist/ directory
-# Contains: index.html + optimized JS/CSS
-
-# Test production build locally
-npm run preview
-```
-
-#### Backend
-```bash
-# Use production ASGI server (not --reload)
-gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker
-
-# Or with uvicorn directly
-uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
-```
-
-### Environment Setup for Production
-
-**backend/.env (Production)**
-```env
-# AI Configuration
-AI_PROVIDER=claude
-CLAUDE_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-# Server Configuration
-DEBUG=false
-LOG_LEVEL=info
-
-# CORS (Update for your domain)
-ALLOWED_ORIGINS=https://yourdomain.com,https://www.yourdomain.com
-```
-
-### Docker Deployment (Optional)
-
-**Dockerfile.backend**
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY backend/ .
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
-```
-
-**Dockerfile.frontend**
-```dockerfile
-FROM node:18-alpine as build
-WORKDIR /app
-COPY package*.json .
-RUN npm install
-COPY . .
-RUN npm run build
-
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-EXPOSE 80
-```
-
-### Deployment Platforms
-
-**Backend Hosting:**
-- **Railway.app**: One-click Python deployment
-- **Render**: Fast, free tier available
-- **Heroku** (Classic): No longer free, but simple
-- **AWS**: EC2, Lambda, or Elastic Beanstalk
-- **DigitalOcean**: Affordable droplets
-
-**Frontend Hosting:**
-- **Vercel**: Optimized for React, free tier
-- **Netlify**: Simple drag-and-drop, free tier
-- **AWS S3 + CloudFront**: Scalable, CDN included
-- **Firebase Hosting**: Google's platform
+The system prompt (in `backend/app/prompt.py`) defines Luxy's full persona — including tone, boundaries, refusal logic, and destination expertise. See [`.docs/system_prompt.py`](.docs/system_prompt.py) for the full annotated version.
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## 📚 Documentation
 
-### Frontend Testing Scenarios
-```bash
-# Test all features manually:
-1. Load home page ✓
-2. Navigate to Concierge ✓
-3. Send test message ✓
-4. Check chat history ✓
-5. Open Travel Planner ✓
-6. Fill form and submit ✓
-7. Check Destinations page ✓
-8. Test Navigation links ✓
-9. Test responsive design ✓
-10. Test Settings panel ✓
-```
+The `.docs/` folder contains supporting documentation for this project:
 
-### Backend Testing
-```bash
-# Check health endpoints
-curl http://localhost:8000
-curl http://localhost:8000/health
-
-# Test chat endpoint
-curl -X POST http://localhost:8000/api/chat \
-  -H "Content-Type: application/json" \
-  -d '{"message": "Test message", "history": []}'
-
-# Check API documentation
-# Visit http://localhost:8000/docs
-# Visit http://localhost:8000/redoc
-```
-
-### Performance Optimization
-```bash
-# Frontend build analysis
-npm run build -- --mode analyze  # (if configured)
-
-# Check bundle size
-npm run build  # Check dist/ folder size
-
-# Monitor API response times
-# Check browser DevTools Network tab
-```
-
----
-
-## 🔒 Security Features
-
-### Frontend Security
-- ✅ No sensitive data in client-side code
-- ✅ API keys never exposed in requests
-- ✅ XSS protection via React's built-in escaping
-- ✅ HTTPS recommended in production
-- ✅ Secure cookies for session management (if needed)
-
-### Backend Security
-- ✅ CORS properly configured and restricted
-- ✅ Input validation via Pydantic
-- ✅ API keys stored in environment variables only
-- ✅ Rate limiting ready (can be added with middleware)
-- ✅ Error messages don't leak sensitive information
-- ✅ HTTPS enforced in production
-
-### API Security Best Practices
-```python
-# ✅ Good: Keys in environment
-CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY")
-
-# ❌ Bad: Keys in code
-CLAUDE_API_KEY = "sk-ant-xxxxxx"
-
-# ✅ Good: Validate all inputs
-class ChatRequest(BaseModel):
-    message: str = Field(..., min_length=1, max_length=5000)
-
-# ✅ Good: Safe error messages
-raise HTTPException(status_code=500, detail="Processing error")
-```
-
----
-
-## 🛠️ Troubleshooting Guide
-
-| Problem | Solution |
-|---------|----------|
-| **Backend won't start** | Ensure Python 3.11+, activate venv, run `pip install -r requirements.txt` |
-| **"Module not found" errors** | Run commands from correct directory, activate venv |
-| **Frontend can't reach backend** | Ensure backend runs at http://localhost:8000, check CORS config |
-| **CORS error in browser** | Verify `ALLOWED_ORIGINS` in backend `main.py` |
-| **Chat shows offline message** | Backend not running; start with `uvicorn main:app --reload` |
-| **API returns 500 error** | Check backend console for errors, verify API key if configured |
-| **npm install fails** | Clear cache: `npm cache clean --force` |
-| **Build fails on Windows** | Activate venv with `.\venv\Scripts\Activate.ps1` (not `activate`) |
-| **Port 8000 already in use** | `uvicorn main:app --port 8001` |
-| **Port 5173 already in use** | `npm run dev -- --port 5174` |
-
----
-
-## 📈 Performance Metrics
-
-### Frontend Performance
-- **Bundle Size**: ~150KB (gzipped)
-- **Time to Interactive**: <2s (dev), <1s (production)
-- **Lighthouse Score**: 90+ (with proper optimization)
-- **React Components**: 5 pages + 3 reusable components
-
-### Backend Performance
-- **Response Time**: <100ms (demo mode), <500ms (API mode)
-- **Concurrent Requests**: Limited only by server capacity
-- **API Documentation**: Auto-generated with Swagger UI
-- **Database**: Not required (stateless API)
-
----
-
-## 📚 Learning Resources
-
-### Technology Stack
-- **React 19 Docs**: https://react.dev
-- **TypeScript Handbook**: https://www.typescriptlang.org/docs
-- **Tailwind CSS**: https://tailwindcss.com/docs
-- **Vite Guide**: https://vitejs.dev/guide
-- **FastAPI Tutorial**: https://fastapi.tiangolo.com/tutorial
-- **Python Async**: https://docs.python.org/3/library/asyncio.html
-
-### AI Integration
-- **Anthropic Claude API**: https://docs.anthropic.com
-- **Google Gemini API**: https://ai.google.dev
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to help:
-
-### Development Setup
-```bash
-# Fork the repository
-git clone https://github.com/yourusername/luxury-ai-travel-planner.git
-cd luxury-ai-travel-planner
-
-# Create feature branch
-git checkout -b feature/amazing-feature
-
-# Make your changes and test
-npm run dev  # Frontend
-uvicorn main:app --reload  # Backend
-
-# Commit with descriptive messages
-git commit -m "feat: add amazing feature"
-
-# Push and create Pull Request
-git push origin feature/amazing-feature
-```
-
-### Code Style Guidelines
-- **Frontend**: Follow ESLint + Prettier configuration
-- **Backend**: Follow PEP 8 with Black formatter
-- **Commits**: Use conventional commits (feat:, fix:, docs:, etc.)
-- **Tests**: Write tests for new features
-- **Documentation**: Update README for significant changes
-
-### Areas for Contribution
-- 🐛 Bug fixes
-- ✨ New features
-- 📖 Documentation improvements
-- 🎨 UI/UX enhancements
-- ⚡ Performance optimizations
-- 🧪 Test coverage
-- 🌍 New destination database entries
-- 🤖 AI prompt improvements
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-You are free to use, modify, and distribute this project for personal and commercial purposes.
-
----
-
-## 👨‍💼 About
-
-**Luxy Travel Persona** demonstrates professional full-stack development with:
-- ✅ Clean, maintainable code architecture
-- ✅ Production-ready security practices
-- ✅ Modern tech stack (React 19, FastAPI, TypeScript)
-- ✅ Comprehensive documentation
-- ✅ AI integration patterns
-- ✅ Professional UI/UX design
-- ✅ Scalable backend design
-- ✅ Error handling and validation
+| File | Description |
+|------|-------------|
+| [`system_prompt.py`](.docs/system_prompt.py) | Full annotated system prompt with persona, rules, and fallback logic |
+| [`few_shot_examples.md`](.docs/few_shot_examples.md) | Real example conversations demonstrating expected AI behaviour |
+| [`test_cases.md`](.docs/test_cases.md) | Backend API and UI test cases with expected outputs |
+| [`before_after_comparison.md`](.docs/before_after_comparison.md) | Prompt engineering evolution — how the prompts improved over iterations |
 
 
 ---
 
-**Made with modern technology.**
+**Key concepts demonstrated:**
+- System prompt engineering with persona, tone, and boundary constraints
+- Few-shot prompting with curated examples
+- Multi-provider AI abstraction (Claude / Gemini / Demo)
+- Production patterns: CORS, environment variable security, error handling
+- Responsive luxury UI with real-time chat and animated components
 
+---
+
+## 👤 Author
+
+<div align="center">
+
+**Venkata Sai Ajith Kancheti**
+B.Tech CSE (AI/ML) · Apollo University
+
+[![GitHub](https://img.shields.io/badge/GitHub-kvsajith34-181717?style=flat-square&logo=github)](https://github.com/kvsajith34)
+
+</div>
 
 ---
 
-### Quick Links
-- 🚀 [Getting Started](#-quick-start)
-- 📡 [API Docs](#-api-documentation)
-- 🤖 [AI Configuration](#-ai-provider-configuration)
-- 🔒 [Security](#-security-features)
-- 📈 [Performance](#-performance-metrics)
-- 🤝 [Contributing](#-contributing)
+<div align="center">
 
----
+*Built during the Generative AI Internship *
+
+</div>
