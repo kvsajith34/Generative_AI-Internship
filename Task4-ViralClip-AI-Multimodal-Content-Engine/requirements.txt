@@ -1,0 +1,15 @@
+streamlit>=1.30.0
+python-dotenv>=1.0.0
+
+# Audio extraction from video files.
+# Pin to 1.x — the new version handles both 1.x and 2.x at import time, but
+# MoviePy 2.x changed write_audiofile's signature (removed `nbytes`).
+# The code handles this gracefully, so either version works.
+moviepy>=1.0.3
+imageio-ffmpeg>=0.4.9
+
+# Speech-to-text (faster-whisper is preferred for CPU / Windows).
+faster-whisper>=1.0.0
+
+# Alternative: install this instead of faster-whisper if preferred.
+# pip install openai-whisper

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+temp_uploads/
+
+# Node
+node_modules/
+package-lock.json
+landing/dist/
+# Local runtime files
+temp_uploads/
+venv/
+__pycache__/
+*.pyc
+.env
+node_modules/
+landing/node_modules/

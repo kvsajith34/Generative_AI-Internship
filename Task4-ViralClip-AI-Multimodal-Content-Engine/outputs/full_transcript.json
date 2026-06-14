@@ -1,0 +1,50 @@
+[
+  {
+    "start": 60.0,
+    "end": 65.0,
+    "title": "Transcribed segment",
+    "text": "I will always be with you",
+    "scores": {
+      "hook_strength": 3.5,
+      "emotional_intensity": 2,
+      "educational_value": 2,
+      "clarity": 4.0,
+      "shareability": 3.6,
+      "quote_worthiness": 3.0,
+      "short_form_suitability": 5.4,
+      "viral_score": 3.35
+    }
+  },
+  {
+    "start": 0.0,
+    "end": 2.8000000000000003,
+    "title": "Transcribed segment",
+    "text": "10 Sad Songs in 1 Minute",
+    "scores": {
+      "hook_strength": 2.0,
+      "emotional_intensity": 2,
+      "educational_value": 2,
+      "clarity": 4.0,
+      "shareability": 3.0,
+      "quote_worthiness": 3.0,
+      "short_form_suitability": 5.0,
+      "viral_score": 2.9
+    }
+  },
+  {
+    "start": 30.0,
+    "end": 32.8,
+    "title": "Transcribed segment",
+    "text": "10 Sad Songs in 1 Minute",
+    "scores": {
+      "hook_strength": 2.0,
+      "emotional_intensity": 2,
+      "educational_value": 2,
+      "clarity": 4.0,
+      "shareability": 3.0,
+      "quote_worthiness": 3.0,
+      "short_form_suitability": 5.0,
+      "viral_score": 2.9
+    }
+  }
+]
