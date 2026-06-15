@@ -81,8 +81,8 @@ All delivered through a clean Streamlit dashboard — **no API keys required**.
 
 ```bash
 # Clone the repository
-git clone https://github.com/kvsajith34/ViralClip-AI.git
-cd ViralClip-AI
+git clone https://github.com/kvsajith34/Generative_AI-Internship.git
+cd Generative_AI-Internship/Task4-ViralClip-AI-Multimodal-Content-Engine
 
 # Create and activate a virtual environment
 python -m venv venv
@@ -313,22 +313,6 @@ streamlit run app.py
 ### Dashboard Home
 ![Home](screenshots/app_home.png)
 *Clean, intuitive interface with sidebar controls and one-click demo mode.*
-
-### Processing Workflow
-![Processing](screenshots/transcript_output.png)
-*Real-time transcript preview and processing status.*
-
-### Viral Segment Analysis
-![Segments](screenshots/viral_segments_output.png)
-*Automated scoring across all 7 viral dimensions.*
-
-### Reel Package Generation
-![Reel](screenshots/reel_package_output.png)
-*Complete content packages with hooks, captions, and metadata.*
-
-### Runway-Ready B-roll Prompts
-![BRoll](screenshots/broll_output.png)
-*AI prompts optimized for Runway ML Text-to-Video generation.*
 
 ---
 
@@ -578,13 +562,6 @@ No. `imageio-ffmpeg` is bundled and handles most use cases. The system FFmpeg is
 
 **Can I deploy this to the cloud?**  
 Yes. See [`docs/deployment.md`](docs/deployment.md) for Docker, AWS, and Heroku deployment guides.
-
----
-
-## License
-
-This project is licensed under the **MIT License** — free for personal and commercial use.  
-See [`LICENSE`](LICENSE) for full terms.
 
 ---
 
